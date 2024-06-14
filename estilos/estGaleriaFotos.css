@@ -100,7 +100,7 @@ ul li:hover .overlay-imagem-link{
     width: 100%;
     opacity: 0;
     /* adiciona efeito de transmissao ( animacao ) a opacidade */
-    /* transition: all ease .5s; */
+    transition: all ease 1s;
 }
 
 .clsItemLista{
