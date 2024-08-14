@@ -10,14 +10,8 @@
 /* elementos: pais */
 header{
     background-color: #5f27cd;
-    padding: 16px 0;
-    color: #fff;
-    display: flex;
     border-bottom: 16px solid #341f97;
-    justify-content: center;
-    /* torna todo texto em letras maiuculas */
-    text-transform: uppercase;
-    font-style: italic;
+    padding: 16px 0;
 }
 
 input
@@ -47,6 +41,7 @@ form{
 ul{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 /* elementos: nivel 1 */
@@ -59,15 +54,16 @@ form h2{
 }
 
 ul li{
-    max-width: 25%;
+    width: 24%;
     /* remove os pontos que vem por padrao */
     list-style: none;
     /* torna posicao relativa p/ posicao absoluta dos links das imagens ficarem dentro do item */
     position: relative;
-    max-width: 280px;
     /* p/ ocultar toda parte da imagem que ultrapassar os 280px;
     ==>> mas aparente esta opcao nao esta funcionando */
     overflow-y: hidden;
+    /* margens */
+    margin: 1% 1% 0 0;
 }
 
 /* elementos: nivel 2 */
@@ -75,10 +71,20 @@ ul li img{
     width: 100%;
     /* determina 100% p/ altura, pois 'overflow-y: hidden;' nao funcionou */
     height: 100%;
+    background-size: cover;
 }
 
 /* elementos: nivel 1
  + classes: pais */
+ header .container{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    /* torna todo texto em letras maiuculas */
+    text-transform: uppercase;
+    font-style: italic;
+}
+
 /* estados */
 ul li:hover .overlay-imagem-link{
     opacity: 1;
@@ -90,6 +96,16 @@ ul li:hover .overlay-imagem-link{
 }
 
 /* classes: pais */
+.container{
+    /* max-width: 1024px; */
+    width: 90vw;
+    margin: 0 auto 0 auto;
+}
+
+.btn-deleta{
+    background-color: transparent;
+}
+
 .overlay-imagem-link{
     padding: 16px;
     background-color: rgba(0,0,0,0.7);
@@ -108,7 +124,22 @@ ul li:hover .overlay-imagem-link{
 }
 
 /* classes elementos: pais */
-.overlay-imagem-link a{
+.overlay-imagem-link a
+,.overlay-imagem-link i{
     color: #fff;
     text-decoration: none;
+}
+
+/* reponsividades : tablet */
+@media (min-width: 724px) and (max-width: 1023px){
+    ul li{
+        width: 49%;
+    }
+}
+
+/* smartphone */
+@media (max-width: 723px){
+    ul li{
+        width: 99%;
+    }
 }

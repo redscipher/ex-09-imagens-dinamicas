@@ -8,30 +8,37 @@
     <link rel="preconnect" href="http://fonts.googleapis.com">
     <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- estilos -->
     <link rel="stylesheet" href="./estilos/estGaleriaFotos.css">
 </head>
 <body>
     <header>
-        <h1>Galeria de Fotos</h1>
-        <button type="button">Nova imagem +</button>
+        <div class="container">
+            <h1>Galeria de Fotos</h1>
+            <button type="button">Nova imagem +</button>
+        </div>
     </header>
-    <form>
-        <h2>Inserir nova imagem</h2>
-        <input type="url" required placeholder="URL da imagem" id="idUrl">
-        <button type="submit">Adicionar</button>
-        <button type="reset" id="botao-cancelar">Cancelar</button>
-    </form>
-    <ul>
-        <li>
-            <img src="./imagens/foto1.jpg" alt="Pintura de um gato">
-            <div class="overlay-imagem-link">
-                <a href="./imagens/foto1.jpg" target="_blank">Ver imagem em tamanho real</a>
-            </div>
-        </li>
-    </ul>
+    <main class="container">
+        <form>
+            <h2>Inserir nova imagem</h2>
+            <input type="url" required placeholder="URL da imagem" id="idUrl">
+            <button type="submit">Adicionar</button>
+            <button type="reset" id="botao-cancelar">Cancelar</button>
+        </form>
+        <ul>
+            <li>
+                <img src="./imagens/foto1.jpg" alt="Pintura de um gato">
+                <div class="overlay-imagem-link">
+                    <a href="./imagens/foto1.jpg" target="_blank">Ver imagem em tamanho real</a>
+                    <button type="button" class="btn-deleta"><i class="bi bi-trash text-white"></i></button>
+                </div>
+            </li>
+        </ul>
+    </main>
     <!-- JQuery: biblioteca baixada p/ arquivo local -->
-    <script src="./biblioteca/jquery-3.7.1.js"></script>
+    <script src="https://rep-arquivos.vercel.app/bibliotecas/jquery/jquery-3.7.1.min.js"></script>
     <!-- importa scripts -->
     <script src="./fontes/jsGaleriaFotos.js"></script>
 </body>
