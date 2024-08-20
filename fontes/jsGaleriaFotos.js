@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
     //manipulando objeto sem JQuery: necessario escrever o codigo puro
-    console.log(document.querySelector('header button'));
+    console.log($('header button'));
 
     // funcoes
     let abreFechaForm = function(){
@@ -60,10 +60,10 @@ $(document).ready(function(){
     }
 
     // eventos : chamando evento com JQuery: evento click
-    $('header button').click(abreFechaForm);
+    $('header button').on('click', (abreFechaForm));
     // adiciona acao ao evento 'submit' do formulario: escuta evento
     $('form').on('submit', adicionaImagem)
-    $('#botao-cancelar').click(fechaForm);
+    $('#botao-cancelar').on('click', (fechaForm));
     // deleta item
     $('ul').on('click', 'li button', excluirImagem)
 });
